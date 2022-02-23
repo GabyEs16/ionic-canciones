@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{artista}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="selecionCancion('')">Cerrar</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let cancion of cancion; index as i" (click)="selecionCancion(cancion)">
+            <ion-avatar>
+                {{ i + 1 }}
+            </ion-avatar>
+            <ion-label>
+                <h2>{{ cancion.nombre }}</h2>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
